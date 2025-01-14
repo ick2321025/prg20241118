@@ -7,47 +7,46 @@
 <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-<h1>市川天文台</h1>
-<form>
-<fieldset>
-<legend>イベント申し込みフォーム</legend>
-<div>
-<input type="radio" id="contactChoice1" name="contact">
-<label for="contactChoice1">星空観察会</label>
+    <h1>市川天文台</h1>
+    <form>
+        <fieldset>
+            <legend>イベント申し込みフォーム</legend>
+            <div>
+                <input type="radio" id="contactChoice1" name="contact">
+                <label for="contactChoice1">星空観察会</label>
+                
+                <input type="radio" id="contactChoice2" name="contact">
+                <label for="contactChoice1">館長の話を聞く会</label>
+            </div>
+            <div>
+                お名前
+                <input type="text">
+            </div>
+            <div>
+                電話番号
+                <input type="text">
+            </div>
+        </fieldset>      
+        <input type="submit" value="送信"onclick="send()">  
+    <form>
+    <script>
+        function ques(){
+            if(window.confirm("申し込みますか？")){
+            alert("完了しました")
+            setTimeout(() => {
+            location.href = "./index.html"
+            }, 3000);
+            }else{
+            send();
+            }
+            }
+        function send(){
+            alert("☆送信完了☆　２４時間以内にこちらの口座にお振込みください！")
+            }
+    </script>
 
-<input type="radio" id="contactChoice2" name="contact">
-<label for="contactChoice1">館長の話を聞く会</label>
-</div>
-<div>
-お名前
-<input type="text">
-</div>
-<div>
-電話番号
-<input type="text">
-</div>
-</fieldset>      
-<input type="submit" value="送信"onclick="send()">  
+    <button onclick="location.href='./index.html'">もどる</button>
 
-<script>
-function ques(){
-if(window.confirm("申し込みますか？")){
-alert("完了しました")
-setTimeout(() => {
-location.href = "./index.html"
-}, 3000);
-}else{
-send();
-}
-}
-function send(){
-alert("☆送信完了☆　２４時間以内にこちらの口座にお振込みください！")
-}
-</script>
-<form>
-
-<button onclick="location.href='./index.html'">もどる</button>
-
-<h7>この天文台は実在しません</h7>
+    <h7>この天文台は実在しません</h7>
 </body>
 </html>
